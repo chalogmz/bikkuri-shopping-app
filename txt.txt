@@ -1,0 +1,96 @@
+style={{backgroundColor: '#f5fafd'}}
+style={{backgroundColor: '#fcf1ed'}}
+style={{backgroundColor: '#fbf0f4'}}
+
+import React from 'react'
+import '../style/main.scss'
+
+
+const Navbar = () => {
+    return (
+        <div className="nav-container">
+            <div className="nav-wrapper">
+                <div className="nav-left">
+                    <span className="nav-language">EN</span>
+                    <div className="nav-search-container">
+                        <input type="text" className="nav-search-bar"></input>
+                        <i className="nav-icon-search" class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div className="nav-center">
+                    <div className="nav-logo"><h1>BIKKURI.</h1></div>
+                </div>
+                <div className="nav-right">
+                    <div className="nav-menu-item">REGISTER</div>
+                    <div className="nav-menu-item">SIGN IN</div>
+                    <div className="nav-menu-item"><i class="fas fa-shopping-cart"></i></div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Navbar
+
+
+import React from 'react'
+import {sliderItems} from '../data'
+import '../style/main.css'
+
+const Slider = () => {
+
+    const [slideIndex, setSlideIndex] = useState(0)
+
+    const handleClick = (direction) => {
+
+        if (direction ==="left"){
+            setSlideIndex(slideIndex > 0 ? slideIndex -1 : 2)
+        } else {
+            setSlideIndex(slideIndex < 2 ? slideIndex +1 : 0)
+        }
+    }
+
+    return (
+        <div className="slider-container">
+            <div className="slider-leftArrow" onClick={() => handleClick("left")}><i class="fas fa-caret-left"></i></div>   
+            <div className="slider-wrapper" slideIndex={slideIndex}>
+                {sliderItems.map(item =>(
+
+                <div className="slide">
+                    <div className="slider-image">
+                        <img className="slider-img" src={item.img} />
+                    </div>
+                    <div className="slider-info">
+                        <h1 className="info-title">{item.title}</h1>
+                        <p className="info-description">{item.description}</p>
+                        <button className="info-btn">SHOP NOW</button>
+                    </div>
+                </div>
+                ))}
+                {/* <div className="slide">
+                    <div className="slider-image">
+                        <img className="slider-img" src="https://res.cloudinary.com/dmaiqkpom/image/upload/v1640917962/img2_y7isk5.jpg" />
+                    </div>
+                    <div className="slider-info">
+                        <h1 className="info-title">WINTER SALE</h1>
+                        <p className="info-description">DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</p>
+                        <button className="info-btn">SHOP NOW</button>
+                    </div>
+                </div>
+                <div className="slide">
+                    <div className="slider-image">
+                        <img className="slider-img" src="https://res.cloudinary.com/dmaiqkpom/image/upload/v1640917967/img1_ggccvn.jpg" />
+                    </div>
+                    <div className="slider-info">
+                        <h1 className="info-title">POPULAR SALE</h1>
+                        <p className="info-description">DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</p>
+                        <button className="info-btn">SHOP NOW</button>
+                    </div>
+                </div> */}
+            </div>         
+            <div className="slider-rightArrow" onClick={() => handleClick("right")}><i class="fas fa-caret-right"></i></div>            
+        </div>
+    )
+}
+
+export default Slider
