@@ -7,13 +7,13 @@ const ProductItem = ({item}) => {
             <div className="product-item-circle"></div>
             <img className="product-item-img" src={item.img}/>
             <div className="product-item-info">
-                <div className="product-item-icon1"><i class="fas fa-shopping-cart"></i></div>
+                <div className="product-item-icon1"><span class="iconify" data-icon="ic:outline-shopping-cart" data-width="26" data-height="26"></span></div>
             </div>
             <div className="product-item-info">
-                <div className="product-item-icon2"><i class="fas fa-search"></i></div>
+                <div className="product-item-icon2"><span class="iconify" data-icon="bx:bx-search-alt-2" data-width="26" data-height="26"></span></div>
             </div>
             <div className="product-item-info">
-                <div className="product-item-icon3"><i class="far fa-heart"></i></div>
+                <div className="product-item-icon3"><span class="iconify" data-icon="akar-icons:heart" data-width="26" data-height="26"></span></div>
             </div>
         </div>
     )

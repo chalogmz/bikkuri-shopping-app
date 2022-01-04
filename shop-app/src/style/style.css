@@ -216,7 +216,7 @@
     font-weight: 600;
 }
 
-/* --------------------------------- PRODUCT -------------------------------- */
+/** --------------------------------- PRODUCT -------------------------------- **/
 .product-main-title {
     display: flex;
     align-items: center;
@@ -226,7 +226,7 @@
 }
 
 .product-title {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 900;
 }
 
@@ -237,7 +237,7 @@
     flex-wrap: wrap;
 }
 
-/* ------------------------------ PRODUCT ITEM ------------------------------ */
+/** ------------------------------ PRODUCT ITEM ------------------------------ **/
 .product-item-container {
     flex: 1;
     margin: 5px;
@@ -252,11 +252,6 @@
     height: 100%;
     z-index: 2;
 } 
-
-.product-item-img:hover {
-    opacity: 0.5;
-    transition: all 0.5s ease;
-}
 
 .product-item-circle {
     width: 200px;
@@ -318,7 +313,7 @@
 }
 
 .product-item-icon1:hover {
-    transform: scale(1.5);
+    transform: scale(1.5); 
 }
 
 .product-item-icon2:hover {
@@ -327,4 +322,130 @@
 
 .product-item-icon3:hover {
     transform: scale(1.5);
+}
+
+
+/** ------------------------------- NEWSLETTER ------------------------------- **/
+.newsletter-container {
+    height: 60vh;
+    background-color: #fcf5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newsletter-title {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.newsletter-description {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.newsletter-input-container {
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+}
+
+.newsletter-input {
+    border: none;
+    flex: 8;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.newsletter-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: teal;
+    color: white;
+}
+
+
+/** --------------------------------- FOOTER --------------------------------- **/
+.footer-container {
+    display: flex;
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-logo {
+    font-weight: bold;
+}
+
+.footer-description {
+    margin: 20px 0px;
+}
+
+.footer-socials {
+    display: flex;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.footer-center {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-center-title {
+    margin-bottom: 30px;
+}
+
+.footer-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-list-item {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.footer-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-right-title {
+    margin-bottom: 30px;
+}
+
+.footer-contact-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-img {
+    width: 50%;
 }
