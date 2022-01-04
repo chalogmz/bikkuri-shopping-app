@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Announcement from '../components/Announcement'
 import Slider from '../components/Slider'
 import Categories from '../components/Categories'
-import Products from '../components/Products'
+import ProductsHome from '../components/ProductsHome'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 
@@ -15,7 +15,7 @@ const Home = () => {
             <Navbar/>
             <Slider/>
             <Categories/>
-            <Products/>
+            <ProductsHome/>
             <Newsletter/>
             <Footer/>
         </div>

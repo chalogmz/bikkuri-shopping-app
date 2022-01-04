@@ -449,3 +449,36 @@
 .footer-img {
     width: 50%;
 }
+
+
+/** ---------------------------------- PAGE ---------------------------------- **/
+
+/** ------------------------------- ProductList ------------------------------ **/
+
+.pl-title {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.pl-filter-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pl-filter {
+    margin: 20px;
+}
+
+.pl-filter-text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pl-filter-select {
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.pl-filter-text {
+    margin-right: 20px;
+}
