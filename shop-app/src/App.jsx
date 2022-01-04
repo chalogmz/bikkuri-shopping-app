@@ -1,9 +1,9 @@
-import Products from './pages/Products';
+import Register from './pages/Register';
 import '../src/style/style.css'
 
 function App() {
   return (
-    <Products/>
+    <Register/>
   );
 }
 
