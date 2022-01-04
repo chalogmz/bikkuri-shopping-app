@@ -188,7 +188,7 @@
     object-fit: cover;
 }
 
-.category-item-info { 
+.category-item-info {
     position: relative;
     top: 0;
     left: 0;
@@ -251,7 +251,7 @@
 .product-item-img {
     height: 100%;
     z-index: 2;
-} 
+}
 
 .product-item-circle {
     width: 200px;
@@ -313,7 +313,7 @@
 }
 
 .product-item-icon1:hover {
-    transform: scale(1.5); 
+    transform: scale(1.5);
 }
 
 .product-item-icon2:hover {
@@ -481,4 +481,110 @@
 
 .pl-filter-text {
     margin-right: 20px;
+}
+
+
+/** ---------------------------------- PAGE ---------------------------------- **/
+/** ----------------------------- PRODUCT DETAIL ----------------------------- **/
+.p-wrapper {
+    padding: 50px;
+    display: flex;
+}
+
+.p-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-info-container {
+    flex: 1;
+}
+
+.p-img {
+    width: 60%;
+}
+
+.p-title {
+    font-weight: 400;
+}
+
+.p-description {
+    width: 80%;
+    font: 30px;
+    margin: 20px 0px;
+    text-align: justify;
+}
+
+.p-price {
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.p-filter-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+
+.p-filter-color {
+    display: flex;
+    align-items: center;
+}
+
+.p-filter-size {
+    display: flex;
+    align-items: center;
+}
+
+.p-filter-title {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.p-option1 {
+    background-color: black;
+    color: black;
+}
+.p-option2 {
+    background-color: darkblue;
+    color: darkblue;
+}
+.p-option3 {
+    background-color: gray;
+    color: gray;
+}
+
+.p-amount-container {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.p-amount {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 15px;
+}
+
+.p-btn {
+    padding: 15px;
+    border: 2px solid teal;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.p-btn:hover {
+    background-color: #f8f4f4;
 }
