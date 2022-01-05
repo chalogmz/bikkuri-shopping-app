@@ -1,28 +1,75 @@
 import React from 'react'
-import '../style/style.css'
+import styled from 'styled-components'
 
+
+const Container = styled.div`
+    height: 60px;
+`
+const Wrapper = styled.div`
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+const Left = styled.div`
+    flex: 1;
+    display: flex;
+    align-items: center;
+`
+const Language = styled.span`
+    font-size: 16px;
+    cursor: pointer;
+`
+const SearchContainer = styled.div`
+    border: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    padding: 5px;
+`
+const Input = styled.input`
+    border: none;
+`
+const Center = styled.div`
+    flex: 1;
+    text-align: center;
+`
+const Logo = styled.h1`
+    font-weight: bold;
+`
+const Right = styled.div`
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+`
+const MenuItem = styled.div`
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 25px;
+`
 
 const Navbar = () => {
     return (
-        <div className="nav-container">
-            <div className="nav-wrapper">
-                <div className="nav-left">
-                    <span className="nav-language">EN</span>
-                    <div className="nav-search-container">
-                        <input type="text" className="nav-search-bar"></input>
-                        <i className="nav-icon-search" class="fas fa-search"></i>
-                    </div>
-                </div>
-                <div className="nav-center">
-                    <div className="nav-logo"><h1>BIKKURI.</h1></div>
-                </div>
-                <div className="nav-right">
-                    <div className="nav-menu-item">REGISTER</div>
-                    <div className="nav-menu-item">SIGN IN</div>
-                    <div className="nav-menu-item"><i class="fas fa-shopping-cart"></i></div>
-                </div>
-            </div>
-        </div>
+        <Container>
+            <Wrapper>
+                <Left>
+                    <Language>EN</Language>
+                    <SearchContainer>
+                        <Input/>
+                        <i class="fas fa-search" style={{color:"gray", fontSize:16}}></i>
+                    </SearchContainer>
+                </Left>
+                <Center>
+                    <Logo>BIKKURI.</Logo>
+                </Center>
+                <Right>
+                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>SIGN IN</MenuItem>
+                    <MenuItem><i class="fas fa-shopping-cart"></i></MenuItem>
+                </Right>
+            </Wrapper>
+        </Container>
     )
 }
 

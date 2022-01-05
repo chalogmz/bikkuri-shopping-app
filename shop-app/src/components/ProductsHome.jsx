@@ -3,7 +3,7 @@ import {popularProducts} from '../data'
 import ProductItem from './ProductItem'
 import '../style/style.css'
 
-export const Products = () => {
+export const ProductsHome = () => {
     return (
 
         <div className="product">
