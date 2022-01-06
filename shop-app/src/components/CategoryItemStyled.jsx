@@ -40,7 +40,7 @@ const Button = styled.button`
     cursor: pointer;
 `
 
-const CategoryItem = ({item}) => {
+const CategoryItemStyled = ({item}) => {
     return (
         <Container>
             <Image src={item.img}/>
@@ -52,4 +52,4 @@ const CategoryItem = ({item}) => {
     )
 }
 
-export default CategoryItem
+export default CategoryItemStyled

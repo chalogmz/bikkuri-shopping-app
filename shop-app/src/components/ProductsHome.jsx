@@ -1,22 +1,39 @@
 import React from 'react'
-import {popularProducts} from '../data'
-import ProductItem from './ProductItem'
-import '../style/style.css'
+import styled from 'styled-components'
+import { popularProducts } from '../data'
+import Products from './Products'
 
-export const ProductsHome = () => {
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const ContainerProducts = styled.div`
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+`
+const Title = styled.h1`
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+`
+
+const ProductsHome = () => {
     return (
-
-        <div className="product">
-            <div className="product-main-title">
-                <h1 className="product-title">HOT PRODUCTS</h1>
-            </div>
-            <div className="products-container">
+        <Container>
+            <Title>HOT PRODUCTS</Title>
+            <ContainerProducts>
                 {popularProducts.map(item => (
-                    <ProductItem item={item} key={item.id}/>
+                    <Products item={item} key={item.id}/>
                 ))}
-            </div>
-        </div>
+            </ContainerProducts>
+        </Container>
     )
 }
+
 
 export default ProductsHome
