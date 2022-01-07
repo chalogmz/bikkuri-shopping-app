@@ -1,40 +1,104 @@
 import React from 'react'
-import '../style/style.css'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+    display: flex;
+`
+const Left = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+`
+const Logo = styled.h1`
+    font-weight: bold;
+`
+const Desc = styled.p`
+    margin: 20px 0px;
+`
+const SocialContainer = styled.div`
+    display: flex;
+`
+const SocialIcon = styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+`
+
+const Center = styled.div`
+    flex: 1;
+    padding: 20px;
+`
+const Title = styled.h3`
+    margin-bottom: 30px;
+`
+const List = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+`
+const ListItem = styled.li`
+    width: 50%;
+    margin-bottom: 10px;
+`
+const Right = styled.div`
+    flex: 1; 
+    padding: 20px;
+`
+const ContactItem = styled.div`
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+`
+const Payment = styled.img`
+    width: 50%;
+`
 
 const Footer = () => {
     return (
-        <div className="footer-container">
-            <div className="footer-left">
-                <h1 className="footer-logo">BIKKURI.</h1>
-                <p className="footer-description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus dignissimos sed quae tenetur ratione, veritatis corporis ullam repellendus necessitatibus quod, quasi culpa beatae, libero similique earum voluptatum qui quis quidem.</p>
-                <div className="footer-socials">
-                    <div className="footer-icon"><i class="fab fa-facebook-f"></i></div>
-                    <div className="footer-icon"><i class="fab fa-instagram"></i></div>
-                    <div className="footer-icon"><i class="fab fa-twitter"></i></div>
-                </div>
-            </div>
-            <div className="footer-center">
-                <h3 className="footer-center-title">Useful Links</h3>
-                <ul className="footer-list">
-                    <li className="footer-list-item">Home</li>
-                    <li className="footer-list-item">Cart</li>
-                    <li className="footer-list-item">Woman Fashion</li>
-                    <li className="footer-list-item">Man Fashion</li>
-                    <li className="footer-list-item">Accesories</li>
-                    <li className="footer-list-item">My Account</li>
-                    <li className="footer-list-item">Order Tracking</li>
-                    <li className="footer-list-item">Whishlist</li>
-                    <li className="footer-list-item">Terms</li>
-                </ul>
-            </div>
-            <div className="footer-right">
-                <h3 className="footer-right-title">Contact</h3>
-                <div className="footer-contact-item"><i class="fas fa-map-marker-alt" style={{marginRight:"10px"}}></i>622 Dixie Path , Sout Tobinchester 98336</div>
-                <div className="footer-contact-item"><i class="fas fa-phone-alt" style={{marginRight:"10px"}}></i>+1 234 56 78</div>
-                <div className="footer-contact-item"><i class="fas fa-envelope" style={{marginRight:"10px"}}></i>contact@bikkuri.com</div>
-                <img className="footer-img" src="https://res.cloudinary.com/dmaiqkpom/image/upload/v1641262647/payments_bv3sgr.png"/>
-            </div>
-        </div>
+        <Container>
+            <Left>
+                <Logo>BIKKURI.</Logo>
+                <Desc>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus dignissimos sed quae tenetur ratione, veritatis corporis ullam repellendus necessitatibus quod, quasi culpa beatae, libero similique earum voluptatum qui quis quidem.
+                </Desc>
+                <SocialContainer>
+                    <SocialIcon><i class="fab fa-facebook-f"></i></SocialIcon>
+                    <SocialIcon><i class="fab fa-instagram"></i></SocialIcon>
+                    <SocialIcon><i class="fab fa-twitter"></i></SocialIcon>
+                </SocialContainer>
+            </Left>
+            <Center>
+                <Title>Useful Links</Title>
+                <List>
+                    <ListItem>Home</ListItem>
+                    <ListItem>Cart</ListItem>
+                    <ListItem>Woman Fashion</ListItem>
+                    <ListItem>Man Fashion</ListItem>
+                    <ListItem>Accesories</ListItem>
+                    <ListItem>My Account</ListItem>
+                    <ListItem>Order Tracking</ListItem>
+                    <ListItem>Whislist</ListItem>
+                    <ListItem>Terms</ListItem>
+                </List>
+            </Center>
+            <Right>
+                <Title>Contact</Title>
+                <ContactItem><i class="fas fa-map-marker-alt" style={{marginRight:"10px"}}></i>622 Dixie Path , South Tobinchester 98336</ContactItem>
+                <ContactItem><i class="fas fa-phone-alt" style={{marginRight:"10px"}}></i>+1 234 56 78</ContactItem>
+                <ContactItem><i class="fas fa-envelope" style={{marginRight:"10px"}}></i>contact@bikkuri.com</ContactItem>
+                <Payment src="https://res.cloudinary.com/dmaiqkpom/image/upload/v1641262647/payments_bv3sgr.png"/>
+            </Right>
+        </Container>
     )
 }
 

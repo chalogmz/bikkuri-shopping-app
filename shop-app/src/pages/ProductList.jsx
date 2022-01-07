@@ -1,51 +1,75 @@
 import React from 'react'
-import '../style/style.css'
+import styled from 'styled-components'
 import Navbar from '../components/Navbar'
 import Announcement from '../components/Announcement'
-import Products from '../components/Products'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
+import ProductsShow from '../components/ProductsShow'
+
+
+const Container = styled.div``
+const Title = styled.h1`
+    margin: 20px;
+`
+const FilterContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+const Filter = styled.div`
+    margin: 20px;
+`
+const FilterText = styled.span`
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+`
+const Select = styled.select`
+    padding: 10px;
+    margin-right: 20px;
+`
+const Option = styled.option``
+
 
 const ProductList = () => {
     return (
-        <div className="pl-container">
+        <Container>
             <Navbar/>
             <Announcement/>
-            <div className="pl-title"><h1>Dresses</h1></div>
-            <div className="pl-filter-container">
-                <div className="pl-filter">
-                    <span className="pl-filter-text">Filter Products:</span>
-                    <select className="pl-filter-select">
-                        <option disabled selected>Color</option>
-                        <option>White</option>
-                        <option>Black</option>
-                        <option>Red</option>
-                        <option>Blue</option>
-                        <option>Yellow</option>
-                        <option>Green</option>
-                    </select>
-                    <select className="pl-filter-select">
-                        <option disabled selected>Size</option>
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                </div>
-                <div className="pl-filter">
-                    <span className="pl-filter-text">Sort Products:</span>
-                    <select className="pl-filter-select">
-                        <option selected>Newest</option>
-                        <option>Price (asc)</option>
-                        <option>Price (desc)</option>
-                    </select>
-                </div>
-            </div>
-            <Products/>
+            <Title>Dresses</Title>
+            <FilterContainer>
+                <Filter>
+                    <FilterText>Filter Products:</FilterText>
+                    <Select>
+                        <Option disabled selected>Color</Option>
+                        <Option>White</Option>
+                        <Option>Black</Option>
+                        <Option>Red</Option>
+                        <Option>Blue</Option>
+                        <Option>Yellow</Option>
+                        <Option>Green</Option>
+                    </Select>
+                    <Select>
+                        <Option disabled selected>Size</Option>
+                        <Option>XS</Option>
+                        <Option>S</Option>
+                        <Option>M</Option>
+                        <Option>L</Option>
+                        <Option>XL</Option>
+                    </Select>
+                </Filter>
+                <Filter>
+                    <FilterText>Sort Products:</FilterText>
+                    <Select>
+                        <Option selected>Newest</Option>
+                        <Option>Price (asc)</Option>
+                        <Option>Price (desc)</Option>
+                    </Select>
+                </Filter>
+            </FilterContainer>
+            <ProductsShow/>
             <Newsletter/>
             <Footer/>
-        </div>
+        </Container>
     )
 }
 
