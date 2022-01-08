@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from "../responsive"
 
 
 const Container = styled.div`
@@ -47,6 +48,7 @@ const MenuItem = styled.div`
     font-size: 16px;
     cursor: pointer;
     margin-left: 25px;
+    ${mobile({ fontSize:"14px" })}
 `
 
 const Navbar = () => {
